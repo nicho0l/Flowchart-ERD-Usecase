@@ -1,0 +1,161 @@
+<mxGraphModel dx="1488" dy="867" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="1000" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <mxCell id="pelanggan" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;fontSize=14;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=2;fillColor=#ffffff;" value="Pelanggan" vertex="1">
+      <mxGeometry height="80" width="40" x="70" y="400" as="geometry" />
+    </mxCell>
+    <mxCell id="admin" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;fontSize=14;strokeColor=#666666;strokeWidth=2;fillColor=#f5f5f5;fontColor=#333333;" value="Admin" vertex="1">
+      <mxGeometry height="80" width="40" x="1190" y="446" as="geometry" />
+    </mxCell>
+    <mxCell id="p_bayar" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.5;fontColor=#1b1b1d;fontSize=12;" value="Bayar via transfer bank" vertex="1">
+      <mxGeometry height="56" width="220" x="260" y="150" as="geometry" />
+    </mxCell>
+    <mxCell id="p_login" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.5;fontColor=#1b1b1d;fontSize=12;" value="Daftar dan Login" vertex="1">
+      <mxGeometry height="56" width="220" x="260" y="230" as="geometry" />
+    </mxCell>
+    <mxCell id="p_book" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.5;fontColor=#1b1b1d;fontSize=12;" value="Booking servis" vertex="1">
+      <mxGeometry height="56" width="220" x="260" y="310" as="geometry" />
+    </mxCell>
+    <mxCell id="p_tgl" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.5;fontColor=#1b1b1d;fontSize=12;" value="Pilih tanggal dan jam" vertex="1">
+      <mxGeometry height="56" width="220" x="260" y="390" as="geometry" />
+    </mxCell>
+    <mxCell id="p_prof" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.5;fontColor=#1b1b1d;fontSize=12;" value="Lihat profil dan layanan" vertex="1">
+      <mxGeometry height="56" width="220" x="260" y="470" as="geometry" />
+    </mxCell>
+    <mxCell id="p_cek" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.5;fontColor=#1b1b1d;fontSize=12;" value="Cek status booking" vertex="1">
+      <mxGeometry height="56" width="220" x="260" y="550" as="geometry" />
+    </mxCell>
+    <mxCell id="p_riw" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.5;fontColor=#1b1b1d;fontSize=12;" value="Lihat riwayat servis" vertex="1">
+      <mxGeometry height="56" width="220" x="260" y="630" as="geometry" />
+    </mxCell>
+    <mxCell id="p_kend" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.5;fontColor=#1b1b1d;fontSize=12;" value="Kelola kendaraan" vertex="1">
+      <mxGeometry height="56" width="220" x="260" y="710" as="geometry" />
+    </mxCell>
+    <mxCell id="a_login" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.5;fontColor=#1b1b1d;fontSize=12;" value="Login" vertex="1">
+      <mxGeometry height="56" width="220" x="840" y="150" as="geometry" />
+    </mxCell>
+    <mxCell id="a_book" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.5;fontColor=#1b1b1d;fontSize=12;" value="Kelola booking" vertex="1">
+      <mxGeometry height="56" width="220" x="840" y="230" as="geometry" />
+    </mxCell>
+    <mxCell id="a_antre" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.5;fontColor=#1b1b1d;fontSize=12;" value="Atur antrean servis" vertex="1">
+      <mxGeometry height="56" width="220" x="840" y="310" as="geometry" />
+    </mxCell>
+    <mxCell id="a_jadwal" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.5;fontColor=#1b1b1d;fontSize=12;" value="Atur jadwal dan slot" vertex="1">
+      <mxGeometry height="56" width="220" x="840" y="390" as="geometry" />
+    </mxCell>
+    <mxCell id="a_verif" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.5;fontColor=#1b1b1d;fontSize=12;" value="Verifikasi pembayaran" vertex="1">
+      <mxGeometry height="56" width="220" x="840" y="470" as="geometry" />
+    </mxCell>
+    <mxCell id="a_rekap" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.5;fontColor=#1b1b1d;fontSize=12;" value="Rekap keuangan" vertex="1">
+      <mxGeometry height="56" width="220" x="840" y="550" as="geometry" />
+    </mxCell>
+    <mxCell id="a_layan" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.5;fontColor=#1b1b1d;fontSize=12;" value="Kelola layanan dan harga" vertex="1">
+      <mxGeometry height="56" width="220" x="840" y="630" as="geometry" />
+    </mxCell>
+    <mxCell id="a_promo" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.5;fontColor=#1b1b1d;fontSize=12;" value="Kelola promo dan poster" vertex="1">
+      <mxGeometry height="56" width="220" x="840" y="710" as="geometry" />
+    </mxCell>
+    <mxCell id="a_plg" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.5;fontColor=#1b1b1d;fontSize=12;" value="Kelola data pelanggan" vertex="1">
+      <mxGeometry height="56" width="220" x="840" y="790" as="geometry" />
+    </mxCell>
+    <mxCell id="as1" edge="1" parent="1" source="pelanggan" style="endArrow=none;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.2;" target="p_bayar">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="260" y="178" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="as2" edge="1" parent="1" source="pelanggan" style="endArrow=none;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.2;" target="p_login">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="260" y="258" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="as3" edge="1" parent="1" source="pelanggan" style="endArrow=none;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.2;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="p_book">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="as4" edge="1" parent="1" source="pelanggan" style="endArrow=none;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.2;" target="p_tgl">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="260" y="418" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="as5" edge="1" parent="1" source="pelanggan" style="endArrow=none;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.2;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="p_prof">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="as6" edge="1" parent="1" source="pelanggan" style="endArrow=none;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.2;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="p_cek">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="as7" edge="1" parent="1" source="pelanggan" style="endArrow=none;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.2;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="p_riw">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="as8" edge="1" parent="1" source="pelanggan" style="endArrow=none;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.2;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="p_kend">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="as9" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.2;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="a_login">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="as10" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.2;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="a_book">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="as11" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.2;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="a_antre">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="as12" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.2;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="a_jadwal">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="as13" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.2;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="a_verif">
+      <mxGeometry relative="1" x="0.1575" as="geometry">
+        <Array as="points">
+          <mxPoint x="1060" y="500" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="as14" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.2;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="a_rekap">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="as15" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.2;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="a_layan">
+      <mxGeometry relative="1" x="0.1508" as="geometry">
+        <Array as="points">
+          <mxPoint x="1060" y="658" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="as16" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.2;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="a_promo">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="as17" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.2;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="a_plg">
+      <mxGeometry relative="1" x="0.1072" as="geometry">
+        <Array as="points">
+          <mxPoint x="1060" y="818" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="r18" edge="1" parent="1" source="p_bayar" style="endArrow=open;endSize=10;dashed=1;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.2;fontSize=11;labelBackgroundColor=#ffffff;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="p_book" value="«include»">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="530" y="178" />
+          <mxPoint x="530" y="338" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="r19" edge="1" parent="1" source="p_book" style="endArrow=open;endSize=10;dashed=1;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.2;fontSize=11;labelBackgroundColor=#ffffff;" target="p_login" value="«include»">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="r20" edge="1" parent="1" source="p_book" style="endArrow=open;endSize=10;dashed=1;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.2;fontSize=11;labelBackgroundColor=#ffffff;" target="p_tgl" value="«include»">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="r21" edge="1" parent="1" source="a_jadwal" style="endArrow=open;endSize=10;dashed=1;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.2;fontSize=11;labelBackgroundColor=#ffffff;" target="p_tgl" value="«extend»">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="r22" edge="1" parent="1" source="a_antre" style="endArrow=open;endSize=10;dashed=1;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.2;fontSize=11;labelBackgroundColor=#ffffff;" target="a_book" value="«include»">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="r23" edge="1" parent="1" source="a_verif" style="endArrow=open;endSize=10;dashed=1;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);strokeWidth=1.2;fontSize=11;labelBackgroundColor=#ffffff;" target="a_rekap" value="«include»">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+  </root>
+</mxGraphModel>
