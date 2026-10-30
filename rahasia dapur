@@ -1,0 +1,114 @@
+Penjelasan untuk Presentasi
+1. Use Case Diagram
+
+Apa itu? Use case diagram menunjukkan apa saja yang bisa dilakukan tiap pengguna pada sistem, bukan bagaimana sistem mengerjakannya. Stickman adalah aktor (pengguna di luar sistem), oval adalah fungsi, dan kotak besar adalah batas sistem.
+
+Aktor
+
+Pelanggan: pemilik mobil yang memakai web untuk booking dan membayar.
+Admin: pengelola bengkel yang mengatur operasional dan keuangan.
+
+Fungsi pelanggan
+
+Daftar dan login (email atau Google).
+Lihat profil dan layanan.
+Cek status booking dengan kode.
+Booking servis.
+Pilih tanggal dan jam.
+Bayar via transfer bank.
+Lihat riwayat servis.
+Kelola kendaraan.
+
+Fungsi admin
+
+Login.
+Kelola booking (konfirmasi atau tolak).
+Atur antrean servis.
+Atur jadwal dan slot.
+Verifikasi pembayaran.
+Rekap keuangan.
+Kelola layanan dan harga.
+Kelola promo dan poster.
+Kelola data pelanggan.
+
+Garis lurus (association) artinya aktor menjalankan fungsi tersebut.
+
+Include dan Extend
+	Include	Extend
+Sifat	Wajib: fungsi tambahan itu pasti dijalankan	Opsional: hanya jika kondisi tertentu terjadi
+Arah panah putus-putus	Dari fungsi utama ke fungsi yang dipakai	Dari fungsi tambahan ke fungsi yang diperluas
+Cara mengingat	“Tidak bisa jalan tanpa ini”	“Boleh ditambah, tapi tidak harus”
+
+Contoh include di diagram ini
+
+Booking servis include Daftar dan Login: pelanggan tidak bisa booking sebelum login.
+Booking servis include Pilih tanggal dan jam: setiap booking pasti memilih jadwal.
+Bayar via transfer bank include Booking servis: pembayaran hanya bisa dilakukan untuk booking yang sudah ada.
+Atur antrean servis include Kelola booking: antrean hanya berisi booking yang sudah dikonfirmasi admin.
+Verifikasi pembayaran include Rekap keuangan: pembayaran yang lunas otomatis tercatat sebagai pemasukan.
+
+Contoh extend
+
+Atur jadwal dan slot extend Pilih tanggal dan jam. Pelanggan tetap bisa memilih jadwal tanpa fungsi admin ini. Namun jika admin menandai suatu tanggal penuh, kalender pelanggan ikut berubah dan tanggal itu tidak bisa dipilih. Jadi fungsinya hanya aktif saat kondisi tertentu terjadi.
+
+Catatan: extend yang melintasi dua aktor ini sedikit disederhanakan. Kalau penguji bertanya, jawabannya: “Ini menunjukkan pengaruh pengaturan admin terhadap proses booking pelanggan.”
+
+2. Flowchart
+
+Apa itu? Flowchart menggambarkan urutan langkah suatu proses dari mulai sampai selesai. Oval adalah mulai/selesai, persegi adalah proses, belah ketupat adalah keputusan (ya/tidak), dan panah adalah arah alur.
+
+Flowchart Pelanggan
+Pelanggan membuka web, lalu login. Jika belum punya akun, ia mendaftar dulu (email atau Google). Jika login gagal, kembali ke login.
+Setelah masuk dashboard, pelanggan memilih layanan lalu memilih tanggal di kalender.
+Keputusan: apakah tanggal dan jam tersedia? Jika penuh, pilih jadwal lain. Jika tersedia, isi data mobil dan keluhan, lalu kirim booking dengan status Menunggu.
+Keputusan: apakah admin mengonfirmasi? Jika ditolak, pelanggan memilih jadwal ulang. Jika dikonfirmasi, booking masuk antrean.
+Pelanggan transfer dan mengirim bukti. Keputusan: apakah pembayaran diverifikasi? Jika ditolak, kirim ulang bukti. Jika lunas, servis dikerjakan.
+Servis selesai, dan pelanggan bisa melihat riwayat servisnya.
+
+Poin yang bisa ditekankan: ada tiga perulangan, yaitu login gagal, tanggal penuh, dan pembayaran ditolak. Ini menunjukkan sistem menangani kondisi gagal, bukan hanya alur ideal.
+
+Flowchart Admin
+Admin login, lalu masuk dashboard ringkasan.
+Alur booking: admin mengecek booking masuk. Keputusan: apakah data valid dan slot tersedia? Jika tidak, booking ditolak. Jika ya, booking dikonfirmasi, lalu admin mengatur antrean (Antre → Dikerjakan) dan menandai servis selesai.
+Alur pembayaran: admin mengecek pembayaran masuk. Keputusan: apakah bukti valid? Jika tidak, pembayaran ditolak. Jika ya, status menjadi Lunas dan pemasukan tercatat otomatis.
+Admin melihat rekap keuangan. Dari dashboard, admin juga mengelola layanan, promo, jadwal, dan slot.
+
+Cara menyampaikan: ceritakan satu skenario dari awal sampai akhir, misalnya “Pak Budi booking ganti oli → admin konfirmasi → Pak Budi transfer → admin verifikasi → mobil dikerjakan → selesai.” Alur pelanggan dan alur admin saling bertemu di tiga titik: konfirmasi booking, verifikasi pembayaran, dan penandaan servis selesai.
+
+3. ERD (Entity Relationship Diagram)
+
+Apa itu? ERD adalah rancangan basis data: tabel apa saja yang ada (entitas), isi tiap tabel (atribut), dan hubungan antartabelnya.
+
+Cara membaca notasinya
+
+PK (Primary Key) adalah pengenal unik tiap baris, FK (Foreign Key) adalah penghubung ke tabel lain, dan UK (Unique) adalah nilai yang tidak boleh kembar, misalnya email atau plat nomor.
+Kaki gagak (tiga garis) berarti banyak, garis tunggal berarti satu, dan lingkaran berarti boleh kosong atau nol.
+11 tabel, dalam 4 kelompok
+Pengguna dan kendaraan: users (admin dan pelanggan dalam satu tabel, dibedakan kolom role) dan vehicles (mobil milik pelanggan).
+Layanan dan booking: services (daftar layanan dan harga), bookings (inti sistem: siapa, mobil apa, layanan apa, kapan), dan queues (nomor antrean dan waktu pengerjaan).
+Pembayaran dan keuangan: bank_accounts (rekening tujuan), payments (bukti transfer dan status verifikasi), dan transactions (buku kas pemasukan dan pengeluaran).
+Pengaturan dan konten: promos (poster), blocked_dates (tanggal penuh atau tutup), dan slot_settings (kapasitas per jam dan jam buka). Tabel slot_settings berdiri sendiri karena berisi pengaturan global, jadi tidak punya relasi.
+Relasi dan kardinalitas
+Relasi	Arti
+users 1 — N vehicles	Satu pelanggan bisa punya banyak mobil
+users 1 — N bookings	Satu pelanggan bisa booking berkali-kali
+vehicles 1 — N bookings	Satu mobil bisa diservis berkali-kali
+services 1 — N bookings	Satu layanan bisa dipilih banyak booking
+bookings 1 — 0..1 queues	Satu booking punya paling banyak satu antrean (baru ada setelah dikonfirmasi)
+bookings 1 — N payments	Satu booking bisa punya beberapa percobaan bayar (misalnya bukti ditolak lalu dikirim ulang)
+bank_accounts 1 — N payments	Satu rekening menerima banyak pembayaran
+payments 1 — 0..1 transactions	Pembayaran yang lunas dicatat satu kali sebagai transaksi
+users 1 — N transactions, promos, blocked_dates	Admin sebagai pencatat dan pengelola
+Alasan desain yang bisa Anda sampaikan
+Satu tabel users dengan kolom role, bukan dua tabel terpisah, supaya login sederhana dan tidak ada data ganda.
+bookings adalah pusat. Hampir semua tabel lain terhubung ke sana, sehingga mudah ditelusuri dari satu kode booking.
+payments dipisah dari bookings. Karena pembayaran bisa ditolak dan diulang, riwayat tiap percobaan tetap tersimpan.
+transactions dipisah dari payments. Tabel ini mencatat pemasukan dari pembayaran maupun pengeluaran manual (stok oli, listrik), sehingga rekap keuangan lengkap.
+blocked_dates dan slot_settings membuat fitur tanggal penuh bisa diatur admin tanpa mengubah program.
+password boleh kosong karena akun yang daftar lewat Google tidak punya password.
+Kemungkinan pertanyaan penguji
+“Kenapa satu booking bisa punya banyak payment?” Karena bukti transfer bisa ditolak dan pelanggan mengirim ulang. Setiap percobaan disimpan sebagai riwayat.
+“Bagaimana mencegah booking ganda di jam yang sama?” Sistem menghitung jumlah booking per tanggal dan jam, lalu membandingkannya dengan kapasitas di slot_settings. Jika sudah penuh, jam itu tidak bisa dipilih.
+“Bagaimana pemasukan masuk ke rekap keuangan?” Saat admin memverifikasi pembayaran, satu baris otomatis dibuat di transactions dengan jenis “masuk”.
+
+Kalau mau, saya bisa jadikan semua penjelasan ini slide PowerPoint atau dokumen Word, lengkap dengan gambar diagramnya.
